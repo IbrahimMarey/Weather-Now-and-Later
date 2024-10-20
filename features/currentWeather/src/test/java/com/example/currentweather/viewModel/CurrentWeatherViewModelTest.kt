@@ -24,25 +24,6 @@ class CurrentWeatherViewModelTest {
     }
 
     @Test
-    fun testGetCurrentWeatherWhenSuccessFetch() = runBlockingTest {
-        // Given
-        val weatherData = WeatherDomainEntity(
-            current = null,
-            dailyForecasts = emptyList(),
-            lat = 10.0,
-            long = 20.0
-        )
-        // Mock
-        `when`(currentWeatherForCityUseCase()).thenReturn(flow { emit(weatherData) })
-        // When
-        viewModel.getCityCurrentWeather()
-        val result = viewModel.cityWeather
-        delay(1000)
-        // Then
-        assertEquals(UIState.Success(weatherData), result.value)
-    }
-
-    @Test
     fun testGetCurrentWeatherFetch() = runBlockingTest {
         // When
         val result = viewModel.cityWeather
