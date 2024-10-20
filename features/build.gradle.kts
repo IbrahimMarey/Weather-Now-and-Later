@@ -67,12 +67,4 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation (libs.androidx.hilt.navigation.compose)
     implementation (libs.androidx.lifecycle.viewmodel.compose)
-
-
-    // Test UI Compose
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.core)
-    debugImplementation(libs.androidx.rules)
-    debugImplementation(libs.androidx.runner)
 }
