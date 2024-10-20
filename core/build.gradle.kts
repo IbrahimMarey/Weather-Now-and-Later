@@ -77,10 +77,4 @@ dependencies {
     // Mockito or MockK for mocking
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockk)
-
-    // Test UI Compose
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-
-
 }
